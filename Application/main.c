@@ -6,6 +6,7 @@ int main(void)
 {
   HAL_Init();	
   USER_UART_Init();
+  USER_I2S_Init();
   
   while(1)
   {    

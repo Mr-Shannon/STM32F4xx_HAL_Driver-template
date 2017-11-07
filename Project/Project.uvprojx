@@ -380,14 +380,14 @@
           <GroupName>Application</GroupName>
           <Files>
             <File>
-              <FileName>board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\board.c</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Application\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Application\board.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_it.c</FileName>
@@ -403,6 +403,11 @@
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Driver\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2s.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\i2s.c</FilePath>
             </File>
           </Files>
         </Group>

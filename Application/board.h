@@ -5,6 +5,7 @@
 #include "stm32f4xx.h"
 #include "stm32f4xx_hal_conf.h"
 #include "uart.h"
+#include "i2s.h"
 
 void SystemClock_Config(void);
 
