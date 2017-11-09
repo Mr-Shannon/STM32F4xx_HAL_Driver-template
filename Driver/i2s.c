@@ -81,7 +81,17 @@ void HAL_I2S_MspDeInit(I2S_HandleTypeDef* hi2s)
   }
 }
 
+void HAL_I2S_RxHalfCpltCallback(I2S_HandleTypeDef *hi2s)
+{
+  UNUSED(hi2s);
+  printf("HAL_I2S_RxHalfCpltCallback\n");
+}
 
+void HAL_I2S_RxCpltCallback(I2S_HandleTypeDef *hi2s)
+{
+  UNUSED(hi2s);
+  printf("HAL_I2S_RxCpltCallback\n");
+}
 
 
 
