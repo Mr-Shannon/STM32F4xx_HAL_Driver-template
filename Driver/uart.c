@@ -40,16 +40,21 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart)
   }
 }
 
+void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
+{
+  if(huart->Instance == USER_UART)
+  {
+    USER_UART_RCC_CLK_ENABLE(); 
+    HAL_GPIO_DeInit(USER_UART_TX_PORT, USER_UART_TX_PIN);
+    HAL_GPIO_DeInit(USER_UART_RX_PORT, USER_UART_RX_PIN);
+  }
+}
+
 int fputc(int ch, FILE *f)   //Printf
 {
-  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0x0);
-  HAL_Delay(1);
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF);
   
   return ch;
 }
 
-int PRINTF(char *ch, ...)
-{
-  return 0;
-}
 
